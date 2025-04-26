@@ -1,6 +1,13 @@
 document.getElementById('gymForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
+  // Get the submit button
+  const submitButton = document.querySelector('.submit-button-wrapper button');
+
+  // Disable the button and add pulsing class
+  submitButton.disabled = true;
+  submitButton.classList.add('pulsing');
+
   // Get the username
   const username = document.querySelector('input[name="username"]').value;
 
@@ -52,7 +59,13 @@ document.getElementById('gymForm').addEventListener('submit', function (event) {
   emailjs.send('service_jhuxqxs', 'template_fjxix4a', emailParams)
     .then(function (response) {
       alert('Email sent successfully!');
+      // Re-enable the button and remove pulsing class
+      submitButton.disabled = false;
+      submitButton.classList.remove('pulsing');
     }, function (error) {
       alert('Failed to send email: ' + JSON.stringify(error));
+      // Re-enable the button and remove pulsing class even if there's an error
+      submitButton.disabled = false;
+      submitButton.classList.remove('pulsing');
     });
 });

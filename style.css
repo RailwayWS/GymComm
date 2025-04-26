@@ -254,3 +254,25 @@ button:hover {
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
+
+/* Pulsing animation for disabled button */
+.submit-button-wrapper button:disabled {
+  cursor: not-allowed;
+  background-color: #a9a9a9; /* Starting grey color */
+}
+
+.pulsing {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #a9a9a9; /* Light grey */
+  }
+  50% {
+    background-color: #696969; /* Dark grey */
+  }
+  100% {
+    background-color: #a9a9a9; /* Light grey */
+  }
+}
