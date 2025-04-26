@@ -1,21 +1,58 @@
-const button = document.getElementById("confirmButton");
+document.getElementById('gymForm').addEventListener('submit', function (event) {
+  event.preventDefault();
 
-button.addEventListener("click", function () {
-  const originalText = button.textContent; // Save the original "Yes" text
-  button.textContent = "Sending..."; // Change to "Sending..." as a loading indicator
-  button.disabled = true; // Disable the button to prevent spam clicks
+  // Get the username
+  const username = document.querySelector('input[name="username"]').value;
 
-  emailjs.send("service_b54w34f", "template_qup48ia", {
-    message: "Plants have been watered",
-    to_email: "janesmostert@gmail.com" // Replace with your email
-  })
+  // Get the state of each item
+  const weightBelt = document.getElementById('weightBeltToggle').checked;
+  const boxingGloves = document.getElementById('boxingGlovesToggle').checked;
+  const scale = document.getElementById('scaleToggle').checked;
+  const foamRoller = document.getElementById('foamRollerToggle').checked;
+
+  // Separate items into present and not present
+  const presentItems = [];
+  const notPresentItems = [];
+
+  if (weightBelt) {
+    presentItems.push('Weight Belt');
+  } else {
+    notPresentItems.push('Weight Belt');
+  }
+
+  if (boxingGloves) {
+    presentItems.push('Boxing Gloves');
+  } else {
+    notPresentItems.push('Boxing Gloves');
+  }
+
+  if (scale) {
+    presentItems.push('Scale');
+  } else {
+    notPresentItems.push('Scale');
+  }
+
+  if (foamRoller) {
+    presentItems.push('Foam Roller');
+  } else {
+    notPresentItems.push('Foam Roller');
+  }
+
+  // Prepare the email content
+  const presentItemsText = presentItems.length > 0 ? presentItems.join(', ') : 'None';
+  const notPresentItemsText = notPresentItems.length > 0 ? notPresentItems.join(', ') : 'None';
+
+  const emailParams = {
+    username: username,
+    present_items: presentItemsText,
+    not_present_items: notPresentItemsText
+  };
+
+  // Send email using EmailJS
+  emailjs.send('service_jhuxqxs', 'template_fjxix4a', emailParams)
     .then(function (response) {
-      button.textContent = originalText; // Restore "Yes"
-      button.disabled = false; // Re-enable the button
-      alert("Notification sent, Thank you!");
+      alert('Email sent successfully!');
     }, function (error) {
-      button.textContent = originalText; // Restore "Yes"
-      button.disabled = false; // Re-enable the button
-      alert("Error sending notification");
+      alert('Failed to send email: ' + JSON.stringify(error));
     });
 });

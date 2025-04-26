@@ -14,6 +14,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -73,18 +74,21 @@
       </div>
     </div>
 
-    <!-- Username Input (moved just above submit and centered) -->
-    <form class="username-form">
+    <!-- Username Input -->
+    <form class="username-form" id="gymForm">
       <input type="text" class="form-input" name="username" placeholder="Enter your name" required>
+      <!-- Submit Button -->
+      <div class="submit-button-wrapper">
+        <button type="submit">
+          Submit
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </div>
     </form>
-
-    <!-- Submit Button -->
-    <div class="submit-button-wrapper">
-      <button>
-        Submit
-        <i class="fa-solid fa-check"></i>
-      </button>
-    </div>
   </div>
+
+  <script>
+    
+  </script>
 </body>
 </html>
