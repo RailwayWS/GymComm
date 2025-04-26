@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym Item Confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("LhQTmAv1vozAXL-3Y");
+    })();
+  </script>
+</head>
+<body>
+  <div class="confirmation-section">
+    <img src="weightlifting.png" alt="Weightlifting" class="weightlifting-img">
+    <h2>Are the following items present in the gym?</h2>
+
+    <!-- Items -->
+    <div class="item-row">
+      <span class="item-label">Weight Belt</span>
+      <div class="checkbox-wrapper-55">
+        <label class="rocker rocker-small">
+          <input type="checkbox" id="weightBeltToggle">
+          <span class="switch-left">Yes</span>
+          <span class="switch-right">No</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <span class="item-label">Boxing Gloves</span>
+      <div class="checkbox-wrapper-55">
+        <label class="rocker rocker-small">
+          <input type="checkbox" id="boxingGlovesToggle">
+          <span class="switch-left">Yes</span>
+          <span class="switch-right">No</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <span class="item-label">Scale</span>
+      <div class="checkbox-wrapper-55">
+        <label class="rocker rocker-small">
+          <input type="checkbox" id="scaleToggle">
+          <span class="switch-left">Yes</span>
+          <span class="switch-right">No</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="item-row">
+      <span class="item-label">Foam Roller</span>
+      <div class="checkbox-wrapper-55">
+        <label class="rocker rocker-small">
+          <input type="checkbox" id="foamRollerToggle">
+          <span class="switch-left">Yes</span>
+          <span class="switch-right">No</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Username Input (moved just above submit and centered) -->
+    <form class="username-form">
+      <input type="text" class="form-input" name="username" placeholder="Enter your name" required>
+    </form>
+
+    <!-- Submit Button -->
+    <div class="submit-button-wrapper">
+      <button>
+        Submit
+        <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

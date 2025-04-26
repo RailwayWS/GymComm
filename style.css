@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+::selection {
+  color: #f2f2f2;
+  background: #1E88E5;
+}
+
+.confirmation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.username-form {
+  width: 100%;
+  margin: 30px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.input-item {
+  display: none;
+}
+
+.field-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input.form-input {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+  color: #5E6472;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+input:focus {
+  transform: translateX(-2px);
+  border-color: #7a9cff;
+}
+
+.weightlifting-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.confirmation-section h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 10px 0;
+}
+
+.item-label {
+  font-size: 18px;
+  color: #fff;
+}
+
+.checkbox-wrapper-55 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-55 *,
+.checkbox-wrapper-55 ::after,
+.checkbox-wrapper-55 ::before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-55 .rocker {
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #555;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #BBDEFB;
+}
+
+.checkbox-wrapper-55 .rocker-small {
+  font-size: 0.75em;
+}
+
+.checkbox-wrapper-55 .rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #90CAF9;
+  border: 0.5em solid #BBDEFB;
+  border-bottom: 0;
+}
+
+.checkbox-wrapper-55 .switch-left,
+.checkbox-wrapper-55 .switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.checkbox-wrapper-55 .switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.checkbox-wrapper-55 .switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #BBDEFB;
+  color: #111;
+}
+
+.checkbox-wrapper-55 .switch-left::before,
+.checkbox-wrapper-55 .switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.checkbox-wrapper-55 .switch-left::before {
+  left: -0.4em;
+}
+
+.checkbox-wrapper-55 .switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left {
+  background-color: #1E88E5;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #555;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+/* Submit Button */
+.submit-button-wrapper {
+  margin-top: 30px;
+}
+
+button {
+  position: relative;
+  padding: 15px 45px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 15px;
+  border: 2px solid #00c2cb;
+  background: none;
+  color: #00c2cb;
+  cursor: pointer;
+  outline: none;
+}
+
+i {
+  position: absolute;
+  color: transparent;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.submit-button-wrapper button {
+  background-color: #1e88e5;
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
